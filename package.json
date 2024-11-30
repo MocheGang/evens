@@ -18,7 +18,7 @@
     "jsonwebtoken": "^9.0.2",
     "mime": "^4.0.4",
     "mongodb": "^6.11.0",
-    "mongoose": "^5.10.9",
+    "mongoose": "^8.8.3",
     "nodemon": "^3.1.7"
   }
 }

@@ -1,19 +1,19 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv'; 
-dotenv.config();
+import dotenv from 'dotenv';
 
+dotenv.config();
 
 const connectDB = async () => {
   try {
-    // Connexion à MongoDB sans les options obsolètes
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URI);  // Suppression des options obsolètes
     console.log('MongoDB connecté avec succès');
-  } catch (err) {
-    console.error('Erreur de connexion MongoDB:', err);
-    process.exit(1);  // Quitte le processus en cas d'échec de la connexion
+  } catch (error) {
+    console.error('Erreur de connexion à MongoDB:', error.message);
+    process.exit(1);
   }
 };
 
 export default connectDB;
+
 
 
